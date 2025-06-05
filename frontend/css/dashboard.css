@@ -1,0 +1,143 @@
+body {
+  background-color: #c08089;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/*imagen*/
+/* Logo centrado en pantalla */
+.main-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.main-logo img {
+  margin: 50px;
+  max-width: 600px;
+  height: auto;
+  user-select: none;
+  border-radius: 20px;
+}
+
+/* Header superior */
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* Botón de logout */
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+/* letras header*/
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  user-select: none;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*fila botones crear*/
+.note-controls {
+display: flex;
+gap: 4rem;
+justify-content: center;
+margin-bottom: 1.5rem;
+}
+
+/*botones crear, buscar*/
+.note-controls button {
+border:#000;
+background:fixed;
+font-size: 3.5rem;
+color: rgb(250, 250, 250);
+cursor: pointer;
+}
+
+.note-list {
+  background-color: #4b3621;
+  border-radius: 20px;
+  padding: 1.5rem;
+  max-width: 750px;
+  margin: auto;
+
+  
+}
+
+/*contenido nota */
+.note {
+background-color: #fff;
+color: #000;
+padding: 1rem;
+border-radius: 15px;
+margin-bottom: 1.2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.note .meta {
+font-size:0.9rem;
+color: #555;
+}
+
+/* boton editar y elimiar*/
+.note-actions button {
+border: none;
+background: none;
+font-size: 2rem;
+color: #000000;
+margin-left: 0.2rem;
+cursor: pointer;
+}
+
+.note-actions button:hover {
+  color: #c08089;
+}
+
+#tagSelector button {
+  cursor: pointer;
+  font-size:medium;
+}
+
+#tagSelector button.active {
+  background-color: #c08089;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+

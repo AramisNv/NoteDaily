@@ -1,0 +1,95 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #c08089;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+
+.login-box {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 500%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.form-switcher {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.form-switcher button {
+  flex: 1;
+  margin: 0 0.25rem;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 40px;
+}
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+
+/*imagen daily*/
+/* Logo centrado en pantalla */
+.main-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.main-logo img {
+  top: 15%;
+  max-width: 400px;
+  height: auto;
+  user-select: none;
+  border-radius:10px;
+}
+
+/* Header superior */
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Texto del logo dentro del header */
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  user-select: none;
+  
+}
+
+
