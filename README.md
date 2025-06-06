@@ -241,7 +241,4 @@ Git (opcional, si vas a clonar el proyecto desde un repositorio)
   );
   ```
 
-- **Ver estado de sincronización**:
-  ```js
-  SyncStatus.findOne({ user: userId });
-  ```
+
