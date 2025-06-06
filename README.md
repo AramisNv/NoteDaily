@@ -62,7 +62,7 @@ Sigue una arquitectura cliente-servidor utilizando el patrón MVC:
 - **Lenguaje de programación**: JavaScript  
 - **Frameworks**: Node.js, Express.js  
 - **Base de datos**: MongoDB  
-- **Librerías**: dotenv, mongoose, bcrypt, jsonwebtoken, etc.
+- **Librerías**: dotenv, mongoose, bcrypt, jsonwebtoken, bootstrap, etc.
 
 ---
 
@@ -70,7 +70,7 @@ Sigue una arquitectura cliente-servidor utilizando el patrón MVC:
 
 ### 🧩 Tecnologías Usadas
 
-- **Frontend**: HTML, CSS, JavaScript (vanilla)  
+- **Frontend**: HTML, CSS, JavaScript (vanilla), bootstrap.
 - **Backend**: Node.js + Express.js  
 - **Base de Datos**: MongoDB (Atlas o local)  
 - **Control de versiones**: Git
@@ -84,8 +84,8 @@ NoteDaily/
 ├── routes/
 │   └── auth.js
 ├── views/
-│   ├── login.html
-│   ├── register.html
+│   ├── index.html
+│   
 │   └── dashboard.html
 ├── controllers/
 │   └── authController.js
@@ -114,27 +114,34 @@ NoteDaily/
 - Conexión a Internet
 
 ### 🛠️ Pasos para instalación
+Antes de instalar, asegúrate de tener instalado:
+Node.js (recomendado: versión 16+)
+MongoDB (puede ser local o MongoDB Atlas)
 
+Git (opcional, si vas a clonar el proyecto desde un repositorio)
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/tuusuario/notedaily.git
    ```
 2. Instala dependencias:
    ```bash
-   npm install
+   npm install bcryptjs cors dotenv express jsonwebtoken mongosee
    ```
 3. Crea el archivo `.env` con las siguientes variables:
    ```
-   MONGODB_URI=your_mongo_uri
-   JWT_SECRET=your_secret_key
+  MONGO_URI=mongodb+srv://yutritospecopeco:Cagada123@tiendaonline.2a9gy.mongodb.net/dailyNote
+  PORT=5000
+  JWT_SECRET=CaquitaPorSiempre
    ```
 4. Inicia el servidor:
    ```bash
-   npm start
+   npm run dev
    # o
    node server.js
    # o
    nodemon server.js
+   ```
+5. Colocarse en carpeta frontend y al archivo index.html. Dar la opción de abrir con Live server
    ```
 
 ---
@@ -145,10 +152,20 @@ NoteDaily/
 
 1. El usuario accede al login.  
 2. Si no tiene cuenta, se registra.  
-3. Una vez autenticado, accede a su panel.  
-4. Desde allí puede crear, leer, editar y eliminar sus notas.
+3. Una vez autenticado, se debe logear con su email y contraseña.
+4. Accede al panel principal del programa, 
+5. Desde allí puede crear, leer, editar y eliminar sus notas.
+6. Si desea, puede cerrar sesion, regresando al login.
 
-> (Aquí pueden ir capturas de pantalla)
+![image](https://github.com/user-attachments/assets/0ae8ec06-13b5-450a-8c6a-af9a2f094ad6)
+![image](https://github.com/user-attachments/assets/dd15990b-7341-43bd-aa92-3523705c327e)
+![image](https://github.com/user-attachments/assets/f773950c-6139-406b-8bed-84ab95841d4a)
+![image](https://github.com/user-attachments/assets/39776595-3e58-4ec1-8af5-f9f30c3dd00e)
+![image](https://github.com/user-attachments/assets/51773519-65de-4ead-a3ca-47ef0758926a)
+
+
+
+
 
 ---
 
@@ -161,7 +178,7 @@ NoteDaily/
 - `nombre` (String)  
 - `email` (String, único)  
 - `contraseña` (String, encriptada)  
-- `fechaRegistro` (Date)
+
 
 **Nota**:
 - `_id` (ObjectId)  
@@ -169,9 +186,8 @@ NoteDaily/
 - `contenido` (String)  
 - `etiquetas`: `["personal", "importante"]`  
 - `fechaCreacion` (Date)  
-- `fechaActualizacion` (Date)  
 - `usuarioId` (ObjectId, referencia a Usuario)  
-- `sincronizado` (Boolean)
+
 
 ### 📄 Descripción de las Entidades
 
@@ -180,7 +196,7 @@ NoteDaily/
 - `nombre`: Nombre del usuario.  
 - `email`: Correo electrónico único del usuario.  
 - `contraseña`: Hash de la contraseña (usa bcrypt).  
-- `fechaRegistro`: Fecha de creación de la cuenta.
+
 
 **Colección `notas`**:
 - `_id`: ID único de la nota.  
@@ -188,8 +204,7 @@ NoteDaily/
 - `contenido`: Cuerpo de la nota.  
 - `etiquetas`: Lista de etiquetas asociadas.  
 - `fechaCreacion`: Fecha cuando se creó la nota.  
-- `fechaActualizacion`: Última modificación.  
-- `sincronizado`: Booleano que indica si la nota ya se subió a la nube.
+
 
 ---
 
